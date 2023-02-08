@@ -10,7 +10,7 @@ theme.visual.a.bg = colors.neutral_purple
 theme.visual.a.fg = colors.light1
 
 -- Color the info area of the status line.
-theme.normal.b.bg = colors.gray
+theme.normal.b.bg = colors.dark1
 theme.normal.b.fg = colors.light1
 
 -- Color the center area of the status line.
