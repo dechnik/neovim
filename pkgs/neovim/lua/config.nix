@@ -64,6 +64,7 @@ mkLuaConfigs [
   ./dashboard.lua
   ./fzf.lua
   ./git.lua
+  ./neogit.lua
   ./gitsigns.lua
   ./hop.lua
   ./icon-picker.lua

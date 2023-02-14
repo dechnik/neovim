@@ -129,6 +129,7 @@ with vimPlugins; [
 
   # Git
   gitsigns-nvim
+  neogit
   # vim-gitgutter
   # vim-fugitive
   # git-messenger-vim
