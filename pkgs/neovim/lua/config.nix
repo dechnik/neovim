@@ -60,6 +60,7 @@ in
 mkLuaConfigs [
   ./bufferline.lua
   ./scope.lua
+  ./copilot.lua
   ./cmp.lua
   ./dashboard.lua
   ./fzf.lua
