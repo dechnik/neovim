@@ -102,6 +102,7 @@ with vimPlugins; [
   nvim-jdtls
   trouble-nvim
   prettier-nvim
+  lspkind-nvim
 
   # Autocomplete
   nvim-cmp
