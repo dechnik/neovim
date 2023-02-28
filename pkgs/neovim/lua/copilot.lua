@@ -1,6 +1,6 @@
 require('copilot').setup({
   panel = {
-    enabled = true,
+    enabled = false,
     -- enabled = false, -- for copilot.cmp
     auto_refresh = false,
     keymap = {
@@ -16,7 +16,7 @@ require('copilot').setup({
     },
   },
   suggestion = {
-    enabled = true,
+    enabled = false,
     -- enabled = false, -- for copilot.cmp
     auto_trigger = false,
     debounce = 75,
@@ -44,11 +44,11 @@ require('copilot').setup({
   server_opts_overrides = {},
 })
 
--- require("copilot_cmp").setup({
---   method = "getCompletionsCycling",
---   formatters = {
---     label = require("copilot_cmp.format").format_label_text,
---     insert_text = require("copilot_cmp.format").format_insert_text,
---     preview = require("copilot_cmp.format").deindent,
---   },
--- })
+require("copilot_cmp").setup({
+  method = "getCompletionsCycling",
+  formatters = {
+    label = require("copilot_cmp.format").format_label_text,
+    insert_text = require("copilot_cmp.format").format_insert_text,
+    preview = require("copilot_cmp.format").deindent,
+  },
+})
