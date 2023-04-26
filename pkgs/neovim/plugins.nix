@@ -9,24 +9,6 @@
 }:
 
 let
-  copilot-lua = pkgs.vimUtils.buildVimPluginFrom2Nix {
-    name = "copilot.lua";
-    src = pkgs.fetchFromGitHub {
-      owner = "zbirenbaum";
-      repo = "copilot.lua";
-      rev = "ca68fc39f656d4025c5e0acc2faf07a28be3a389";
-      sha256 = "sha256-GJ0nr0NgcAOXUSMpdapqLOtCES5ECtzl6sOrr1BEhSc=";
-    };
-  };
-  copilot-cmp = pkgs.vimUtils.buildVimPluginFrom2Nix {
-    name = "copilot-cmp";
-    src = pkgs.fetchFromGitHub {
-      owner = "zbirenbaum";
-      repo = "copilot-cmp";
-      rev = "976d687a97ed986c3043eccd4449a3cf2476f3d1";
-      sha256 = "sha256-G13Xu4UKBtNsgmVzQOjiJvpsuLIhcTjZQFnaCsR+raE=";
-    };
-  };
   icon-picker = vimUtils.buildVimPluginFrom2Nix {
     pname = "icon-picker.nvim";
     version = "unstable-2022-09-03";
@@ -78,10 +60,6 @@ with vimPlugins; [
   (nvim-treesitter.withPlugins
     (plugins: tree-sitter.allGrammars))
   tree-sitter-playground
-
-  # Copilot
-  copilot-lua
-  copilot-cmp
 
   # Utility
   plenary-nvim
