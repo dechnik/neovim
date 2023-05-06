@@ -200,5 +200,11 @@ which_key.register({
 	g = {
 		name = "Go",
 		b = { "<cmd>:BufferLinePick<CR>", "Go to buffer" }
-	}
+	},
+	["["] = {
+		b = { "<cmd>:BufferLineCycleNext<cr>", "Next buffer" },
+	},
+	["]"] = {
+		b = { "<cmd>:BufferLineCyclePrev<cr>", "Previous buffer" },
+	},
 }, { mode = "n", noremap = true, silent = true })
