@@ -9,6 +9,10 @@ db.setup({
 		week_header = {
 			enable = true,
 		},
+		packages = { enable = false },
+		project = { enable = true, limit = 8, icon = '  ', label = 'Recent Projects:',
+			action = 'Telescope find_files cwd=' },
+		mru = { limit = 16, icon = '  ', label = 'Recent files:', },
 		shortcut = {
 			{
 				icon = ' ',
@@ -19,15 +23,9 @@ db.setup({
 				key = 'f',
 			},
 			{
-				desc = ' Apps',
-				group = 'DiagnosticHint',
-				action = 'Telescope app',
-				key = 'a',
-			},
-			{
 				desc = ' dotfiles',
 				group = 'Number',
-				action = "Telescope path=" .. home .. "/Projects/nix-config",
+				action = "Telescope find_files cwd=" .. home .. "/Projects/nix-config",
 				key = 'd',
 			},
 		},
