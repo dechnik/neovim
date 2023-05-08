@@ -3,6 +3,37 @@ local db = require("dashboard")
 
 db.session_directory = home .. "/.config/dashboard-nvim/";
 
+db.setup({
+	theme = 'hyper',
+	config = {
+		week_header = {
+			enable = true,
+		},
+		shortcut = {
+			{
+				icon = ' ',
+				icon_hl = '@variable',
+				desc = 'Files',
+				group = 'Label',
+				action = 'Telescope find_files',
+				key = 'f',
+			},
+			{
+				desc = ' Apps',
+				group = 'DiagnosticHint',
+				action = 'Telescope app',
+				key = 'a',
+			},
+			{
+				desc = ' dotfiles',
+				group = 'Number',
+				action = "Telescope path=" .. home .. "/Projects/nix-config",
+				key = 'd',
+			},
+		},
+	},
+})
+
 db.custom_center = {
 	{
 		icon = "  ",
