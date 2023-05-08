@@ -16,6 +16,7 @@ telescope.setup {
 }
 
 telescope.load_extension("manix")
+telescope.load_extension("harpoon")
 
 which_key.register({
 	f = {

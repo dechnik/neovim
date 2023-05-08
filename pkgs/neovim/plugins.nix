@@ -63,6 +63,7 @@ with vimPlugins; [
 
   # Utility
   plenary-nvim
+  harpoon
   vim-bufkill
   neodev-nvim
   dressing-nvim

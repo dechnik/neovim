@@ -85,6 +85,7 @@ mkLuaConfigs [
   ./neoscroll.lua
   # ./nord.lua
   ./gruvbox.lua
+  ./harpoon.lua
   ./telescope.lua
   ./tmux-navigator.lua
   ./todo-comments.lua
