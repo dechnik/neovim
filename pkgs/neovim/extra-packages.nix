@@ -29,5 +29,5 @@ with pkgs; [
   lua5_1
 
   # Node
-  nodejs-16_x
+  nodejs-18_x
 ]
