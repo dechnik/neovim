@@ -2,7 +2,7 @@
   description = "Neovim configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/23.05";
   };
 
   outputs = { self, nixpkgs }:
