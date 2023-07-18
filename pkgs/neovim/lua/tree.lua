@@ -1,9 +1,6 @@
 local tree = require("nvim-tree")
+local api = require("nvim-tree.api")
 local which_key = require("which-key")
-
-local function reload_tree()
-	tree.api.reload()
-end
 
 local function on_attach(bufnr)
 	local api = require('nvim-tree.api')
@@ -80,7 +77,7 @@ local function on_attach(bufnr)
 	vim.keymap.set('n', 'O', api.node.run.system, opts('Run System'))
 	vim.keymap.set('n', '<C-r>', function()
 		local node = api.tree.get_node_under_cursor()
-		-- your code goes here
+		api.tree.reload()
 	end, opts('no description'))
 end
 
@@ -89,18 +86,9 @@ tree.setup {
 	on_attach = on_attach,
 }
 
-local function map(mode, lhs, rhs, opts)
-	local options = { noremap = true }
-
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
-
--- Toggle the file tree.
-map("n", "<C-n>", ":NvimTreeToggle<cr>", { silent = true })
+which_key.register({
+	["<C-n>"] = { "<cmd>:NvimTreeToggle<cr>", "Toggle Tree" },
+}, { mode = "n", silent = true })
 
 which_key.register({
 	g = {

@@ -48,13 +48,15 @@ let
   custom-rc = ''
     lua <<EOF
       -- Allow imports from common locations for some packages.
-      -- This is required for things like sumneko_lua to work.
+      -- This is required for things like lua_ls to work.
       local runtime_path = vim.split(package.path, ";")
       table.insert(runtime_path, "lua/?.lua")
       table.insert(runtime_path, "lua/?/init.lua")
     EOF
+
     " Custom VIML Config.
     ${vim-config}
+
     " Custom Lua Config.
     ${lua-config}
   '';

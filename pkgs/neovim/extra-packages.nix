@@ -30,4 +30,7 @@ with pkgs; [
 
   # Node
   nodejs-18_x
+
+  # Misc
+  fortune
 ]

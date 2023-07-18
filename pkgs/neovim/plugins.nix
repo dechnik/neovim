@@ -49,6 +49,16 @@ let
       sha256 = "1yznmc5a32b4bw0c9q0jfkbd77xmi7rmihfr0f44bcgqdxlp8151";
     };
   };
+  dbsession-nvim = vimUtils.buildVimPluginFrom2Nix {
+    pname = "dbsession.nvim";
+    version = "unstable-2023-05-31";
+    src = fetchFromGitHub {
+      owner = "nvimdev";
+      repo = "dbsession.nvim";
+      rev = "8a9d15244190e5f191beef03d50f988e5077446c";
+      sha256 = "12yrmnphspb3nyrsgvmp5m270k5hkw1gna904ypl90smskc4wiyx";
+    };
+  };
 in
 with vimPlugins; [
   # Icons
@@ -60,6 +70,7 @@ with vimPlugins; [
   (nvim-treesitter.withPlugins
     (plugins: tree-sitter.allGrammars))
   tree-sitter-playground
+  nvim-treesitter-context
 
   # Utility
   plenary-nvim
@@ -141,6 +152,7 @@ with vimPlugins; [
 
   # Dashboard
   dashboard-nvim
+  dbsession-nvim
 
   # Markdown
   markdown-preview-nvim
@@ -155,4 +167,11 @@ with vimPlugins; [
 
   # Prisma
   vim-prisma
+
+  # Bookmarks
+  vim-bookmarks
+  telescope-vim-bookmarks-nvim
+
+  # Line Indentation
+  indent-blankline-nvim
 ]
